@@ -1,16 +1,22 @@
-# React + Vite
+# GENRAGE — Luxury Streetwear Archive (Assignment 1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, minimal matte-black E-Commerce storefront lookbook built with React and Vite. Engineered to disrupt traditional fashion layouts with high-impact asymmetric grids and raw technical typography alignment.
 
-Currently, two official plugins are available:
+## 🔗 Live Application
+👉 [Click Here to View Live Storefront Deployment](https://assignment-1-genrage.vercel.app) 
+*(Note: Replace this URL with your exact live Vercel link if it is different!)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Project Architecture
+This application features a modular component ecosystem built entirely for clean visual performance:
+- `Navbar.jsx` - Global navigation framework with interactive layout parameters.
+- `Hero.jsx` - Dual-aspect widescreen editorial image entry screen.
+- `Categories.jsx` - Concept statement/manifesto text display panel.
+- `ProductCards.jsx` - Asymmetrical merchandising product display archive grid.
+- `SizeGuideModal.jsx` - Interactive overlay component for dimensional fit profiles.
+- `LookbookFeature.jsx` - Three-column greyscale-to-color editorial gallery lookbook strip.
+- `PromoVideoBanner.jsx` - Cinematic video-frame layout interface panel.
+- `Newsletter.jsx` - Minimal database email entry form platform.
+- `Footer.jsx` - Symmetrical mission and vision dual aspect summary panels.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖥️ Live Application Preview
+![Storefront Widescreen Capture](https://api.pikwy.com/web/6a22f67e23fe5a65df777b01.jpg)

@@ -25,7 +25,7 @@ function Footer() {
         <div className="split-image-block">
           <img src="https://i.pinimg.com/736x/24/83/28/248328411a20b4824b9474232ef71387.jpg" alt="Vision Context" />
         </div>
-        <div><h5>© 2026 GENRAGE. ALL RIGHTS RESERVED.</h5></div>
+        <div><h5>© 2026 PREET PATIL. ALL RIGHTS RESERVED.</h5></div>
       </div>
     </footer>
   );

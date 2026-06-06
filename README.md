@@ -50,4 +50,4 @@ The Antigravity AI Agent was directed to refine my original workspace while stri
 ---
 
 ## 🖥️ Live Application Preview
-![Storefront Widescreen Capture]([https://pikwy.com/web/6a244bd7905a7361ae514345](https://api.pikwy.com/web/6a244bd7905a7361ae514345.jpg))
+![Storefront Widescreen Capture](https://api.pikwy.com/web/6a244cebe2333860584a1982.jpg)

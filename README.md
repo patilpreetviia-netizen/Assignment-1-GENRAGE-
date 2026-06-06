@@ -4,7 +4,6 @@ A premium, minimal matte-black E-Commerce storefront lookbook built with React a
 
 ## 🔗 Live Application
 👉 [Click Here to View Live Storefront Deployment](https://assignment-1-genrage.vercel.app) 
-*(Note: Replace this URL with your exact live Vercel link if it is different!)*
 
 ## 🛠️ Project Architecture
 This application features a modular component ecosystem built entirely for clean visual performance:

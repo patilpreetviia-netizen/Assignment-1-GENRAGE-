@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Newsletter() {
   const handleSubmit = (e) => {
     e.preventDefault();

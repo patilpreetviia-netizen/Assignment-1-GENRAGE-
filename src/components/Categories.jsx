@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Categories() {
   return (
     <section className="statement-banner">

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Hero({ setView }) {
   return (
     <header className="hero-showcase">

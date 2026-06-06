@@ -1,5 +1,3 @@
-import React from 'react';
-
 function LookbookFeature() {
   return (
     <section className="lookbook-strip">

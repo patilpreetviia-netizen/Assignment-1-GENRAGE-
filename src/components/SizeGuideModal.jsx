@@ -1,5 +1,3 @@
-import React from 'react';
-
 function SizeGuideModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 

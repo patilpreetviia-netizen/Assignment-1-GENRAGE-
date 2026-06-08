@@ -1,15 +1,18 @@
 import { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
-function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSizeGuide, onSelectProduct }) {
+function ProductDetail({ products = [], onAddToCart, onOpenSizeGuide, onSelectProduct }) {
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState(null);
   const [expandedSection, setExpandedSection] = useState('desc');
 
-  const product = products.find((p) => p.id === productId);
+  const product = products.find((p) => p.id === Number(id));
   if (!product) {
     return (
       <div className="pdp-container" style={{ textAlign: 'center', padding: '100px 0' }}>
         <h3 className="raw-title">[ SYSTEM ERROR: PRODUCT NOT FOUND ]</h3>
-        <button className="split-btn" style={{ marginTop: '20px' }} onClick={onBack}>
+        <button className="split-btn" style={{ marginTop: '20px' }} onClick={() => navigate('/catalog')}>
           Return to Archive
         </button>
       </div>
@@ -31,7 +34,7 @@ function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSi
   return (
     <div className="pdp-container">
       {/* Back to archive navigation */}
-      <button className="pdp-back-btn" onClick={onBack}>
+      <button className="pdp-back-btn" onClick={() => navigate('/catalog')}>
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ transform: 'rotate(180deg)', marginRight: '4px' }}>
           <line x1="5" y1="12" x2="19" y2="12"></line>
           <polyline points="12 5 19 12 12 19"></polyline>
@@ -64,7 +67,7 @@ function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSi
                 Size Guide
               </button>
             </div>
-            
+
             <div className="pdp-size-grid">
               {['01 / SMALL', '02 / MEDIUM', '03 / LARGE'].map((size) => (
                 <button
@@ -105,7 +108,7 @@ function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSi
             {/* Specifications Accordion */}
             <div className="accordion-item">
               <button className="accordion-header" onClick={() => toggleSection('specs')}>
-                <span>Fabrication & Specifications</span>
+                <span>Fabrication &amp; Specifications</span>
                 <span>{expandedSection === 'specs' ? '—' : '+'}</span>
               </button>
               <div className={`accordion-content ${expandedSection === 'specs' ? 'expanded' : ''}`}>
@@ -122,12 +125,12 @@ function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSi
             {/* Shipping logistics Accordion */}
             <div className="accordion-item">
               <button className="accordion-header" onClick={() => toggleSection('shipping')}>
-                <span>Logistics & Returns Architecture</span>
+                <span>Logistics &amp; Returns Architecture</span>
                 <span>{expandedSection === 'shipping' ? '—' : '+'}</span>
               </button>
               <div className={`accordion-content ${expandedSection === 'shipping' ? 'expanded' : ''}`}>
                 <div className="accordion-inner-text">
-                  All pieces are cataloged and prepared for dispatch within 48 business hours. 
+                  All pieces are cataloged and prepared for dispatch within 48 business hours.
                   <br /><br />
                   Due to the limited nature of Core drops, all sales are final. Size exchanges are processed subject to inventory availability. Shipping calculated securely at payment interface.
                 </div>
@@ -142,7 +145,7 @@ function ProductDetail({ productId, products = [], onBack, onAddToCart, onOpenSi
               </button>
               <div className={`accordion-content ${expandedSection === 'auth' ? 'expanded' : ''}`}>
                 <div className="accordion-inner-text">
-                  Every garment is integrated with a unique serial encryption signature. 
+                  Every garment is integrated with a unique serial encryption signature.
                   <br /><br />
                   Verifiable via the digital ledger node sequence printed on the garment neck ribbon. Ensures provenance, genuine fabric density verification, and design authenticity.
                 </div>

@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function ProductCards({ title, limit, products = [], onSelectProduct, onAddToCart }) {
   const [activeCategory, setActiveCategory] = useState('ALL');
@@ -19,6 +21,29 @@ function ProductCards({ title, limit, products = [], onSelectProduct, onAddToCar
 
   // Slice for limit
   const displayedProducts = limit ? sortedProducts.slice(0, limit) : sortedProducts;
+
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    if (gridRef.current && displayedProducts.length > 0) {
+      const cards = gridRef.current.children;
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: gridRef.current,
+            start: 'top 85%',
+          }
+        }
+      );
+    }
+  }, [displayedProducts]);
 
   return (
     <div className="catalog-wrapper">
@@ -56,7 +81,7 @@ function ProductCards({ title, limit, products = [], onSelectProduct, onAddToCar
         <span className="sub-mono">// {title}</span>
       )}
 
-      <div className="catalog-grid" style={{ marginTop: limit ? '24px' : '0' }}>
+      <div className="catalog-grid" ref={gridRef} style={{ marginTop: limit ? '24px' : '0' }}>
         {displayedProducts.map((item) => (
           <div key={item.id} className="catalog-card">
             <div className="catalog-img-frame" onClick={() => onSelectProduct(item.id)}>

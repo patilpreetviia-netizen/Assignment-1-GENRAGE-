@@ -1,4 +1,4 @@
-# GENRAGE — Luxury Streetwear Archive (Assignment 1)
+# GENRAGE — Luxury Streetwear Archive
 
 A premium, minimal matte-black E-Commerce storefront interface built with React and Vite. Engineered to disrupt traditional fashion layouts with high-impact asymmetric grids, mathematical micro-elements, and raw technical typography alignment.
 
@@ -8,24 +8,33 @@ A premium, minimal matte-black E-Commerce storefront interface built with React 
 
 ---
 
-## 🛠️ Project Architecture & Components
+## 🚀 New Features & Backend Integration (v2.0)
 
-This platform has been developed adhering to clean structural layout guidelines, splitting functional views into independent modular files inside the `src/components/` directory:
+This platform has been drastically upgraded from a static frontend architecture into a fully functional dynamic web application utilizing **Supabase** (PostgreSQL) for backend services.
 
-* `ThreeDLogo.jsx` - Interactive, mouse-responsive mathematical 3D digital brand sculpture rendered via HTML5 Canvas.
-* `Navbar.jsx` - Global navigation framework with interactive layout parameters and modular SVGs.
-* `Hero.jsx` - Dual-aspect widescreen editorial image entry screen.
-* `Categories.jsx` - Concept statement and filtering system for structural garment tiers.
-* `ProductCards.jsx` - Asymmetrical merchandising product display archive grid with price/category sorting filters.
-* `ProductDetail.jsx` - Extended Product Detail Page (PDP) offering technical dimensions, size selection, and description accordions.
-* `CartSidebar.jsx` - Right-hand slide-out utility drawer maintaining item counters, subtotal math, and an integrated mock checkout pipeline.
-* `SearchOverlay.jsx` - Full-screen real-time query matcher filtering results instantly against the product database.
-* `ToastContainer.jsx` - Floating action message alerting framework communicating system operations.
-* `SizeGuideModal.jsx` - Interactive modal overlay mapping dimensional garment fit profiles.
-* `LookbookFeature.jsx` - Three-column greyscale-to-color editorial gallery lookbook strip.
-* `PromoVideoBanner.jsx` - Cinematic media-frame structural interface panel.
-* `Newsletter.jsx` - Minimal grid entry portal for client subscription logging.
-* `Footer.jsx` - Symmetrical mission, routing directories, and dual-aspect summary blocks.
+### Core Upgrades:
+* **Supabase Authentication:** Secure User and Admin Registration/Login using Email/Password and Google OAuth.
+* **Live Database Catalog:** The entire product catalog is now fetched dynamically from a live Supabase PostgreSQL database instead of static local files.
+* **Dedicated User Dashboard:** Logged-in users can view their active session details and track their full historic order history in real-time.
+* **Admin Control Panel:** Secured admin-only routes offering a complete CRUD (Create, Read, Update, Delete) product manager, and a transaction log interface to monitor and update incoming user orders.
+* **Checkout Pipeline:** Fully operational shipping detail capture and UPI verification checkout flow that pushes orders directly to the live database and tracks payment status.
+
+---
+
+## 🛠️ Frontend Architecture & Components
+
+The platform still adheres to clean structural layout guidelines, splitting functional views into independent modular files inside the `src/` directory:
+
+* **Authentication & Routing**
+  * `AuthContext.jsx` - Global authentication state manager controlling user sessions and role permissions.
+  * `ProtectedRoute.jsx` & `AdminRoute.jsx` - Secure navigation guards restricting access to dashboard components.
+* **Pages & Dashboards**
+  * `AuthPage.jsx` - The central cyber-security login and registration portal.
+  * `UserDashboard.jsx` - Personal user hub for viewing past orders and account details.
+  * `AdminDashboard.jsx` - Master control panel for store administrators.
+* **Storefront Components**
+  * `CheckoutPage.jsx` - Multi-step shipping and payment confirmation pipeline.
+  * `Navbar.jsx`, `Hero.jsx`, `ProductCards.jsx`, `CartSidebar.jsx` - Core navigation and dynamic merchandising elements.
 
 ---
 
@@ -43,9 +52,9 @@ All visual media elements and product graphics utilized across the storefront gr
 
 ## 🤖 Development Methodology
 
-The original concept, core architecture, and basic foundational code for this platform were completely my own creation. To escalate the interface to a professional, industry-grade storefront standard, I imported my baseline files into **Antigravity AI Workspace** to upgrade the aesthetics, accelerate layout generation, and implement advanced interactive features.
+The original concept, core architecture, and basic foundational code for this platform were completely my own creation. To escalate the interface to a professional, industry-grade storefront standard, I imported my baseline files into **Antigravity AI Workspace** to upgrade the aesthetics, accelerate layout generation, and implement advanced interactive backend features.
 
-The Antigravity AI Agent was directed to refine my original workspace while strictly enforcing all standard React paradigms required by the assignment brief—ensuring that every individual modular component successfully yields exactly one parent container/fragment wrapper and utilizes correct `className` attributes.
+The Antigravity AI Agent was directed to refine my original workspace while strictly enforcing all standard React paradigms required by the assignment brief.
 
 ---
 
